@@ -13,13 +13,13 @@ function adicionarTarefa() {
         departamento,
         importancia,
         valor,
-        duracao
+        duracao,
     };
 
     const taskList = document.getElementById("taskList");
     const listItem = document.createElement("li");
     //Define a nova lista 
-    listItem.innerHTML = `${descricao} - ${autor} - ${departamento} - ${importancia}`;
+    listItem.innerHTML = `Descrição: ${descricao} - Autor: ${autor} - Departamento: ${departamento} - Importância: ${importancia} - Valor: ${valor} - Duração: ${duracao}`;
     taskList.appendChild(listItem);
 
     // Adicionando as informações preenchidas no formulário
