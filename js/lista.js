@@ -7,6 +7,7 @@ function adicionarTarefa() {
     const valor = document.getElementById("valor").value;
     const duracao = document.getElementById("duracao").value;
 
+    //armazenar os valores
     const tarefa = {
         descricao,
         autor,
@@ -35,15 +36,17 @@ function adicionarTarefa() {
 document.getElementById("btLista").addEventListener("click", adicionarTarefa);
 
 // Função para excluir tarefas concluídas
+// Função para excluir tarefas concluídas
 function excluirTarefasConcluidas() {
     const taskList = document.getElementById("taskList");
     const tarefas = taskList.getElementsByTagName("li");
 
     for (let i = tarefas.length - 1; i >= 0; i--) {
         const tarefa = tarefas[i];
-        if (tarefa.classList.contains("concluida")) {
-            taskList.removeChild(tarefa);
-        }
+        const descricao = tarefa.innerText.split(" - ")[0]; // Obtém a descrição da tarefa
+        //Remove a tarefa
+        taskList.removeChild(tarefa); 
+
     }
 }
 
