@@ -4,81 +4,6 @@ function adicionarTarefa() {
     const autor = document.getElementById("author").value;
     const departamento = document.getElementById("depart").value;
     const importancia = document.getElementById("impor").value;
-    const valor = document.getElementById("valor").value;
-    const duracao = document.getElementById("duracao").value;
-
-    const tarefa = {
-        descricao,
-        autor,
-        departamento,
-        importancia,
-        valor,
-        duracao,
-    };
-
-    const taskList = document.getElementById("taskList");
-    const listItem = document.createElement("li");
-    listItem.textContent = `Descrição: ${descricao} - Autor: ${autor} - Departamento: ${departamento} - Importância: ${importancia} - Valor: ${valor} - Duração: ${duracao}`;
-    taskList.appendChild(listItem);
-
-    // Limpar campos do formulário
-    document.getElementById("taskForm").reset();
-}
-
-// Adiciona o evento de clique no botão "Adicionar tarefa"
-document.getElementById("btLista").addEventListener("click", adicionarTarefa);
-
-// ... (seu código JavaScript existente) ...
-
-// Função para adicionar uma nova tarefa à lista
-function adicionarTarefa() {
-    const descricao = document.getElementById("Desc").value;
-    const autor = document.getElementById("author").value;
-    const departamento = document.getElementById("depart").value;
-    const importancia = document.getElementById("impor").value;
-    const valorCheckbox = document.getElementById("chkValor");
-    const duracaoCheckbox = document.getElementById("chkDuracao");
-
-    let valor = "";
-    let duracao = "";
-
-    if (valorCheckbox.checked) {
-        valor = document.getElementById("valor").value;
-    }
-
-    if (duracaoCheckbox.checked) {
-        duracao = document.getElementById("duracao").value;
-    }
-
-    const tarefa = {
-        descricao,
-        autor,
-        departamento,
-        importancia,
-        valor,
-        duracao,
-    };
-
-    const taskList = document.getElementById("taskList");
-    const listItem = document.createElement("li");
-    listItem.textContent = `Descrição: ${descricao} - Autor: ${autor} - Departamento: ${departamento} - Importância: ${importancia} - Valor: ${valor} - Duração: ${duracao}`;
-    taskList.appendChild(listItem);
-
-    // Limpar campos do formulário
-    document.getElementById("taskForm").reset();
-}
-
-// Adiciona o evento de clique no botão "Adicionar tarefa"
-document.getElementById("btLista").addEventListener("click", adicionarTarefa);
-
-// ... (seu código JavaScript existente) ...
-
-// Função para adicionar uma nova tarefa à lista
-function adicionarTarefa() {
-    const descricao = document.getElementById("Desc").value;
-    const autor = document.getElementById("author").value;
-    const departamento = document.getElementById("depart").value;
-    const importancia = document.getElementById("impor").value;
     const valorCheckbox = document.getElementById("chkValor");
     const duracaoCheckbox = document.getElementById("chkDuracao");
 
@@ -101,7 +26,7 @@ function adicionarTarefa() {
         valor,
         duracao,
     };
-
+    //Criação da nova lista 
     const taskList = document.getElementById("taskList");
     const listItem = document.createElement("li");
     listItem.textContent = `Descrição: ${descricao} - Autor: ${autor} - Departamento: ${departamento} - Importância: ${importancia} - Valor: ${valor} - Duração: ${duracao}`;
@@ -130,4 +55,3 @@ function excluirTarefasConcluidas() {
 
 // Adiciona o evento de clique no botão "Excluir tarefas concluídas"
 document.getElementById("btExcluirConcluidas").addEventListener("click", excluirTarefasConcluidas);
-
