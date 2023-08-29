@@ -5,42 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de tarefas</title>
     <script src="./js/lista.js" defer></script>
+</head>
 <body>
-    <h1>Lista de Terefas</h1>
-    <!--Criação do formulário para acrescentar os dados a lista de tarefas-->
-    <!--Utilizamos o placeholder para mostrar uma frase no campo a ser preenchido-->
+    <h1>Lista de Tarefas</h1>
+    
     <fieldset>
-        
-        <form action="#" method="get"></form>
-
-        <label for="top-1">Descrição</label>
-        <input type="text" name="descr" id="Desc" placeholder="Descreva a tarefa">
-        
-        <label for="top-2">Autor</label>
-        <input type="text" name="aut" id="author" placeholder="Autor da tarefa">
-
-        <label for="top-3">Departamento</label>
-        <input type="text" name="dep" id="depart" placeholder="Departamento da tarefa">
-
-        <label for="top-4">Importância</label>
-        <input type="text" name="imp" id="impor" placeholder="Nivel de importância">
-        
-        <label for="top-5">Valor</label>
-        <input type="text" name="val" id="valor" placeholder="Valor da tarefa">
-
-        <label for="top-6">Duração</label>
-        <input type="text" name="dur" id="duracao" placeholder="Duração da tarefa">
-
-        
-        <button id="btLista">Adicionar tarefa</button>
-
+        <form id="taskForm">
+            <label for="Desc">Descrição</label>
+            <input type="text" name="descr" id="Desc" placeholder="Descreva a tarefa">
+            
+            <label for="author">Autor</label>
+            <input type="text" name="aut" id="author" placeholder="Autor da tarefa">
+            
+            <label for="depart">Departamento</label>
+            <input type="text" name="dep" id="depart" placeholder="Departamento da tarefa">
+            
+            <label for="impor">Importância</label>
+            <input type="text" name="imp" id="impor" placeholder="Nível de importância">
+            
+            <label for="valor">Valor</label>
+            <input type="text" name="val" id="valor" placeholder="Valor da tarefa">
+            
+            <label for="duracao">Duração</label>
+            <input type="text" name="dur" id="duracao" placeholder="Duração da tarefa">
+            
+            <button type="button" id="btLista">Adicionar tarefa</button>
+        </form>
     </fieldset>
     
     <ul id="taskList"></ul>
-
-    <button id="btExcluirConcluidas">Excluir tarefas concluídas</button>
-
-
     
+    <button id="btExcluirConcluidas">Excluir tarefas concluídas</button>
 </body>
 </html>
